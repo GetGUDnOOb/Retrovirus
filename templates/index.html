@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retroviral Dynamics Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Retroviral Dynamics Simulation</h1>
+        <form method="POST">
+            <label for="lambda_T">Target Cell Production Rate (λT):</label>
+            <input type="text" name="lambda_T" required>
+
+            <label for="d_T">Death Rate of Target Cells (dT):</label>
+            <input type="text" name="d_T" required>
+
+            <label for="beta">Infection Rate (β):</label>
+            <input type="text" name="beta" required>
+
+            <label for="d_I">Death Rate of Infected Cells (dI):</label>
+            <input type="text" name="d_I" required>
+
+            <label for="p">Production Rate of Virus Particles (p):</label>
+            <input type="text" name="p" required>
+
+            <label for="d_V">Death Rate of Virus Particles (dV):</label>
+            <input type="text" name="d_V" required>
+
+            <label for="T0">Initial Target Cells (T0):</label>
+            <input type="text" name="T0" required>
+
+            <label for="I0">Initial Infected Cells (I0):</label>
+            <input type="text" name="I0" required>
+
+            <label for="V0">Initial Virus Particles (V0):</label>
+            <input type="text" name="V0" required>
+
+            <input type="submit" value="Run Simulation">
+        </form>
+    </div>
+    <div class="footer">
+        <p>© 2024 Retroviral Dynamics Simulation</p>
+    </div>
+</body>
+</html>
